@@ -1,12 +1,16 @@
+//Incluímos en variables el icono de llamada al menú y el container de pantalla completa:
 let menuIcon = document.getElementById("menuIcon");
 let menufullscreen = document.getElementById("fullscreenContainer");
 
+// Ocultamos por defecto el menú
 menufullscreen.style.display = "none";
 
+// Función para crear un delay al cerrar el menú a pantalla completa y mostar el FadeOut
 function delay(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
 }
 
+// Función para llamar al menú a pantalla completa
 async function showMenu() {
     if (menufullscreen.style.display === "none") {
         document.documentElement.classList.add("stop-scrolling");
@@ -16,6 +20,7 @@ async function showMenu() {
     }
 }
 
+// Función para salir del menú a pantalla completa
 async function closeMenu() {
     if (menufullscreen.style.display === "block") {
         menufullscreen.classList.remove("fade-in");
@@ -25,3 +30,9 @@ async function closeMenu() {
         menufullscreen.style.display = "none";
     }
 }
+
+// Solución para el problema del overflow en dispositivos móviles.
+// Obtenemos la altura del visor y la multiplicamos por 1% para obtener un valor para la unidad vh
+let vh = window.innerHeight * 0.01;
+// Entonces aplicamos dicho valor en la propiedad personalizada --vh a la raíz del documento HTML
+document.documentElement.style.setProperty("--vh", `${vh}px`);

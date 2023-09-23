@@ -2,11 +2,6 @@
 
 /* Estilos principales */
 
-body,
-html {
-    height: 100%;
-}
-
 html {
     overflow-x: hidden;
     overflow-y: auto;
@@ -129,6 +124,7 @@ a:hover {
     margin: 0;
     position: absolute;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     width: 100vw;
     background: rgb(0, 48, 73);
     background: linear-gradient(

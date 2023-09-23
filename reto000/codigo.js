@@ -1,14 +1,18 @@
+// Guardamos en variables los elementos donde se mostrará la solución y la salida de la consola
 let codeDiv = document.getElementById("codeSolution");
 let codeExe = document.getElementById("codeWorking");
 
+// Ocultamos por defecto todo el contenido
 codeDiv.style.display = "none";
 codeExe.style.display = "none";
 
-function showSolution() {
+// Función que es el código del reto ejecutándose en tiempo real y mostrando el resultado en el div "codeWorking".
+function exeCode() {
+    // Ocultamos el div que corresponde a "showCode()" y mostramos el de exeCode()
     codeExe.style.display = "block";
     codeDiv.style.display = "none";
-    codeExe.innerText = "";
-    codeExe = document.getElementById("codeWorking");
+
+    // Y ejecutamos el código
     for (let i = 1; i <= 100; i++) {
         if (i % 15 == 0) console.log("FizzBuzz");
         else if (i % 3 == 0) console.log("Fizz");
@@ -16,6 +20,8 @@ function showSolution() {
         else console.log(i);
     }
 }
+
+// Función sencilla para mostrar la solución del código del reto
 function showCode() {
     codeDiv.style.display = "block";
     codeExe.style.display = "none";
