@@ -59,7 +59,8 @@ br {
     align-items: center;
 }
 
-#infoBox {
+#infoBox,
+#challengesList {
     border-radius: 5px;
     background-color: #003049;
     color: #fbfbfb;
@@ -70,11 +71,17 @@ br {
     font-size: 1.2em;
 }
 
-#infoBox a {
+#challengesList {
+    font-size: calc(0.5em + 1vmin);
+}
+
+#infoBox #challengesList,
+a {
     color: #fbfbfb;
 }
 
-#infoBox a:hover {
+#infoBox #challengesList,
+a:hover {
     color: #fbfbfb;
     text-shadow: 0px 0 5px #fbfbfb;
 }
