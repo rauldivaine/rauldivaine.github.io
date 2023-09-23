@@ -1,6 +1,12 @@
 /* Paleta de colores: https://coolors.co/003049-f18f01-e01a4f-fbfbfb-0892a5 */
 
 /* Estilos principales */
+
+body,
+html {
+    height: 100%;
+}
+
 html {
     overflow-x: hidden;
     overflow-y: auto;
