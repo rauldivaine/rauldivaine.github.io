@@ -7,18 +7,14 @@
         <link rel="stylesheet" href="style.css" />
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     </head>
-    <body>
+    <body onLoad="overflowCheck()">
         <nav>
             <div id="fullscreenContainer">
                 <div id="closeFullscreenMenu" onClick="closeMenu()">
                     &#10006;
                 </div>
                 <div id="fullscreenMenu">
-                    <ul>
-                        <li class="fullscreenMenuElement">
-                            <a href="#">Volver a retos</a>
-                        </li>
-                    </ul>
+                    <a class="fullscreenMenuElement" href="#">Volver a retos</a>
                 </div>
             </div>
         </nav>
@@ -37,20 +33,25 @@
                 <p>
                     Los ejercicios propuestos por mouredev que he ido realizando
                     adaptados a Javascript, en cada uno podrás ver el enunciado,
-                    la solución y ejecutarlos para ver el resultado en consola.
+                    la solución y ejecutarlos para ver el resultado en
+                    consola.<br />
+                    Puedes encontrar la lista completa en
+                    <a
+                        href="https://www.retosdeprogramacion.com"
+                        target="_blank"
+                        >retosdeprogramacion.com</a
+                    >
                 </p>
             </div>
 
             <div id="infoBox">
-                <ul>
-                    <li>
-                        <h1>
-                            <a href="./reto000/"
-                                >Reto #0: EL FAMOSO "FIZZ BUZZ”</a
-                            >
-                        </h1>
-                    </li>
-                </ul>
+                <h1>
+                    <a href="./reto000/">Reto #0: EL FAMOSO "FIZZ BUZZ”</a>
+                </h1>
+                <h1>
+                    Reto #1: ¿ES UN ANAGRAMA?
+                    <span class="inProcess">&circlearrowright Pendiente</span>
+                </h1>
             </div>
         </section>
     </body>

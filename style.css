@@ -1,6 +1,16 @@
 /* Paleta de colores: https://coolors.co/003049-f18f01-e01a4f-fbfbfb-0892a5 */
 
 /* Estilos principales */
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
 
 a {
     text-decoration: none;
@@ -10,27 +20,35 @@ body {
     margin: 0;
     font-family: Roboto Mono, monospace;
     background-color: #fbfbfb;
+    overflow-x: hidden;
+}
+
+br {
+    display: block;
+    margin: 10px 0;
+    content: "";
 }
 
 #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
+    width: 100%vw;
     min-height: 10vw;
     background-color: #e01a4f;
     color: #fbfbfb;
     font-size: calc(0.5em + 2vmin);
+    margin: 0 0 4lvh 0;
 }
 
 #mainTitle {
     color: #fbfbfb;
-    padding: 0 0 0 4lvh;
+    padding: 0 4lvh 0 4lvh;
 }
 
 #subTitle {
     margin: -2lvh 0 4lvh 0;
-    padding: 0 0 0 4lvh;
+    padding: 0 4lvh 0 4lvh;
 }
 
 #container {
@@ -47,8 +65,9 @@ body {
     color: #fbfbfb;
     max-width: 70vw;
     width: 70vw;
-    margin: 4lvh 4lvh 0lvh 4lvh;
+    margin: 0 4lvh 4lvh 4lvh;
     padding: 0 4lvh 0 4lvh;
+    font-size: 1.2em;
 }
 
 #infoBox a {
@@ -60,7 +79,38 @@ body {
     text-shadow: 0px 0 5px #fbfbfb;
 }
 
+.inProcess {
+    color: #0892a5;
+    font-size: 0.7em;
+}
+
 /* Estilos del menú */
+
+.fade-out {
+    animation: fadeOut ease 0.2s;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeIn ease 0.2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 #fullscreenContainer {
     margin: 0;
@@ -76,18 +126,16 @@ body {
     color: #fbfbfb;
     backdrop-filter: blur(0.5em);
     z-index: 100;
+    overflow: hidden;
 }
 
-#fullscreenMenu ul {
+#fullscreenMenu {
+    height: 50vh;
     display: flex;
-    align-self: center;
+    align-items: center;
     justify-content: center;
-}
-
-#fullscreenMenu li {
-    font-size: calc(2em + 7vmin);
+    font-size: 2em;
     opacity: 1;
-    list-style-type: none;
 }
 
 #fullscreenMenu a {
@@ -110,7 +158,7 @@ body {
     flex-direction: column;
     justify-self: end;
     align-self: start;
-    margin: 1lvh 3lvh 0 0;
+    margin: 1lvh 2lvh 0 0;
 }
 
 #menuIcon:hover {

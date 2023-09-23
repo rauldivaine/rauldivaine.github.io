@@ -1,3 +1,6 @@
+let codeDiv = document.getElementById("codeSolution");
+let codeExe = document.getElementById("codeWorking");
+
 codeDiv.style.display = "none";
 codeExe.style.display = "none";
 
