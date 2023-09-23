@@ -1,0 +1,61 @@
+/* Paleta de colores: https://coolors.co/003049-f18f01-e01a4f-fbfbfb-0892a5 */
+@import "../style.css";
+/* Estilos principales */
+
+#challenge {
+    display: flex;
+    border-radius: 5px;
+    background-color: #003049;
+    color: #fbfbfb;
+    margin: 0 4lvh 0 4lvh;
+    padding: 0 4lvh 0 4lvh;
+}
+
+#description {
+    color: #003049;
+    margin: 2lvh 0 2lvh 4lvh;
+}
+
+#console {
+    display: flex;
+    border-radius: 5px;
+    background-color: #003049;
+    color: #fbfbfb;
+    min-height: 10lvh;
+    margin: 0 4lvh 4lvh 4lvh;
+    padding: 0 4lvh 0 4lvh;
+}
+
+#codeMenu {
+    margin: 2lvh 4lvh 2lvh 4lvh;
+}
+
+#showCode,
+#exeCode {
+    border: 0;
+    padding: 1lvh;
+    color: #fbfbfb;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#showCode {
+    background-color: #0892a5;
+}
+
+#showCode:hover {
+    box-shadow: 0px 2px 10px #0892a5;
+}
+#exeCode {
+    background-color: #f18f01;
+}
+
+#exeCode:hover {
+    box-shadow: 0px 2px 10px #f18f01;
+}
+
+.tab {
+    margin-left: 40px;
+}

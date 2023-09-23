@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reto #0: EL FAMOSO "FIZZ BUZZ”</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <nav>
+            <div id="fullscreenContainer">
+                <div id="closeFullscreenMenu" onClick="closeMenu()">
+                    &#10006;
+                </div>
+                <div id="fullscreenMenu">
+                    <ul>
+                        <li class="fullscreenMenuElement">
+                            <a href="../">Volver a retos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header>
+            <div id="header">
+                <h1 id="mainTitle">Reto #0: EL FAMOSO "FIZZ BUZZ”</h1>
+                <div id="menuIcon" onClick="showMenu()">
+                    <div class="menuIconBars"></div>
+                    <div class="menuIconBars"></div>
+                    <div class="menuIconBars"></div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <h1 id="description">Descripción del reto:</h1>
+            <div id="challenge">
+                <p>
+                    /*<br />
+                    * Escribe un programa que muestre por consola (con un print)
+                    los<br />
+                    * números de 1 a 100 (ambos incluidos y con un salto de
+                    línea entre<br />
+                    * cada impresión), sustituyendo los siguientes:<br />
+                    * - Múltiplos de 3 por la palabra "fizz".<br />
+                    * - Múltiplos de 5 por la palabra "buzz".<br />
+                    * - Múltiplos de 3 y de 5 a la vez por la palabra
+                    "fizzbuzz".<br />
+                    */
+                </p>
+            </div>
+        </section>
+        <nav>
+            <div id="codeMenu">
+                <button id="showCode" onClick="showCode()">Ver código</button>
+                <button id="exeCode" onClick="showSolution()">
+                    Ejecutar código
+                </button>
+            </div>
+        </nav>
+        <section>
+            <div id="console">
+                <p id="textConsole"></p>
+                <p id="codeSolution">
+                    for (let i = 1; i <= 100; i++) {<br />
+                    <span class="tab"></span>if (i % 15 == 0)
+                    console.log("FizzBuzz");<br />
+                    <span class="tab"></span>else if (i % 3 == 0)
+                    console.log("Fizz");<br />
+                    <span class="tab"></span>else if (i % 5 == 0)
+                    console.log("Buzz");<br />
+                    <span class="tab"></span>else console.log(i);<br />
+                    }<br />
+                </p>
+                <p id="codeWorking"></p>
+            </div>
+        </section>
+    </body>
+    <script src="../menu.js"></script>
+    <script src="codigo.js"></script>
+</html>
