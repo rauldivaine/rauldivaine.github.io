@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reto #1: ¿ES UN ANAGRAMA?</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <nav>
+            <div id="fullscreenContainer">
+                <div id="closeFullscreenMenu" onClick="closeMenu()">
+                    &#10006;
+                </div>
+                <div id="fullscreenMenu">
+                    <a href="../">Volver a retos</a>
+                </div>
+            </div>
+        </nav>
+        <header>
+            <div id="header">
+                <h1 id="mainTitle">Reto #1: ¿ES UN ANAGRAMA?</h1>
+                <div id="menuIcon" onClick="showMenu()">
+                    <div class="menuIconBars"></div>
+                    <div class="menuIconBars"></div>
+                    <div class="menuIconBars"></div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <h1 id="description">Descripción del reto:</h1>
+            <div id="challenge">
+                <p>
+                    /*<br />
+                    * Escribe una función que reciba dos palabras (String) y
+                    retorne<br />
+                    * verdadero o falso (Bool) según sean o no anagramas.<br />
+                    * - Un Anagrama consiste en formar una palabra reordenando
+                    TODAS<br />
+                    * las letras de otra palabra inicial.<br />
+                    * - NO hace falta comprobar que ambas palabras existan.<br />
+                    * - Dos palabras exactamente iguales no son anagrama.<br />
+                    */<br />
+                </p>
+            </div>
+        </section>
+        <nav>
+            <div id="codeMenu">
+                <button id="showCode" onClick="showCode()">Ver código</button>
+                <button id="exeCode" onClick="exeCode()">
+                    Ejecutar código
+                </button>
+            </div>
+        </nav>
+        <section>
+            <div id="console">
+                <p id="textConsole"></p>
+                <p id="codeSolution">
+                    <span class="inProcess">&circlearrowright; Pendiente</span>
+                </p>
+                <p id="codeWorking"></p>
+            </div>
+        </section>
+    </body>
+    <script src="../menu.js"></script>
+    <script src="codigo.js"></script>
+</html>
