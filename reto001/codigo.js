@@ -16,8 +16,10 @@ function exeCode() {
     // Para este ejercicio vamos usar dos inputs de texto, cargamos sus valores en variables
     word1 = document.getElementById("word1").value;
     word2 = document.getElementById("word2").value;
+
     word1 = accentMarks(word1);
     word2 = accentMarks(word2);
+
     // Como el usuario podrá ejecutarlo más de una vez creamos una función para limpiar la consola
     function cleanConsole() {
         document.getElementById("codeWorking").innerHTML = "";
@@ -110,6 +112,7 @@ $(".inputText").bind("keypress", alphaOnly);
 
 function accentMarks(string) {
     return string
+        .trim()
         .normalize("NFD")
         .replace(/([aeio])\u0301|(u)[\u0301\u0308]/gi, "$1$2")
         .normalize();
