@@ -57,11 +57,13 @@
                     id="word1"
                     class="inputText"
                     placeholder="Palabra 1"
+                    onkeydown="if (event.keyCode == 13) document.getElementById('exeCode').click()"
                 /><input
                     type="text"
                     id="word2"
                     class="inputText"
                     placeholder="Palabra 2"
+                    onkeydown="if (event.keyCode == 13) document.getElementById('exeCode').click()"
                 />
             </div>
         </nav>
@@ -91,18 +93,28 @@
                     <span class="tab"></span> cleanConsole();<br />
                     <span class="tab"></span> console.log("¡Debes introducir dos
                     palabras!");<br />
-
-                    // También comprobamos si ambas palabras son la misma<br />
-                    } else if (word1 === word2) {<br />
+                    // Comprobamos que ambas palabras tengan la misma
+                    longitud<br />
+                    <span class="tab"></span> } else if (word1.length !==
+                    word2.length) {<br />
+                    <span class="tab"></span> cleanConsole();<br />
+                    <span class="tab"></span> console.log(<br />
+                    <span class="tab"></span> "Las palabras no tienen la misma
+                    cantidad de caracteres, así que no pueden ser anagramas."<br />
+                    <span class="tab"></span> );<br />
+                    // Si ambos casos son negativos entonces dividimos las
+                    palabras en carácteres individuales en arrays usando split y
+                    lo mostramos en consola<br />
+                    <span class="tab"></span> } else if (word1 !== word2) {<br />
                     <span class="tab"></span> cleanConsole();<br />
                     <span class="tab"></span> console.log(<br />
                     <span class="tab"></span> "Si ambas palabras son la misma no
                     puedo comprobar si es un anagrama :("<br />
                     <span class="tab"></span>);<br />
 
-                    <span class="tab"></span> // Si ambos casos son negativos
-                    entonces dividimos las palabras en carácteres individuales
-                    en arrays usando split y lo mostramos en consola<br />
+                    // Si ambos casos son negativos entonces dividimos las
+                    palabras en carácteres individuales en arrays usando split y
+                    lo mostramos en consola<br />
                     } else if (word1 !== word2) {<br />
                     <span class="tab"></span> cleanConsole();<br />
                     <span class="tab"></span> word1 = word1.toUpperCase();<br />

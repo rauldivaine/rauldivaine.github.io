@@ -32,7 +32,12 @@ function exeCode() {
         console.log(
             "Si ambas palabras son la misma no puedo comprobar si es un anagrama :("
         );
-
+        // Comprobamos que ambas palabras tengan la misma longitud
+    } else if (word1.length !== word2.length) {
+        cleanConsole();
+        console.log(
+            "Las palabras no tienen la misma cantidad de caracteres, así que no pueden ser anagramas."
+        );
         // Si ambos casos son negativos entonces dividimos las palabras en carácteres individuales en arrays usando split y lo mostramos en consola
     } else if (word1 !== word2) {
         cleanConsole();
