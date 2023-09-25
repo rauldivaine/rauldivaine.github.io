@@ -48,10 +48,8 @@ function exeCode() {
         word2 = word2.toUpperCase();
         word2Split = word2.split("");
 
-        console.log("La primera palabra es: \n" + word1Split.join(" ") + ".");
-        console.log(
-            "La segunda palabra es: \n " + word2Split.join(" ") + ". \n"
-        );
+        console.log("La primera palabra es: <br>" + word1Split.join(" "));
+        console.log("La segunda palabra es: <br> " + word2Split.join(" "));
         // Utilizando el método sort junto con join unimos ambas arrays en dos strings para poder compararlas
         word1 = word1Split.sort().join("");
         word2 = word2Split.sort().join("");
