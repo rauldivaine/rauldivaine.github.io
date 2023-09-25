@@ -48,6 +48,9 @@
         <nav>
             <div id="codeMenu">
                 <button id="showCode" onClick="showCode()">Ver código</button>
+                <button id="exeCode" onClick="exeCode()">
+                    Ejecutar código
+                </button>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
                 <input
                     type="text"
@@ -60,11 +63,11 @@
                     class="inputText"
                     placeholder="Palabra 2"
                 />
-                <button id="exeCode" onClick="exeCode()">
-                    Ejecutar código
-                </button>
             </div>
         </nav>
+        <p class="inProcess" style="margin: 0 4lvh 0lvh 4lvh; font-size: 1.2em">
+            NOTA: En este reto debes insertar dos palabras para verlo funcionar
+        </p>
         <section>
             <div id="console">
                 <p id="textConsole"></p>
