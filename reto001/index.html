@@ -48,6 +48,18 @@
         <nav>
             <div id="codeMenu">
                 <button id="showCode" onClick="showCode()">Ver código</button>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                <input
+                    type="text"
+                    id="word1"
+                    class="inputText"
+                    placeholder="Palabra 1"
+                /><input
+                    type="text"
+                    id="word2"
+                    class="inputText"
+                    placeholder="Palabra 2"
+                />
                 <button id="exeCode" onClick="exeCode()">
                     Ejecutar código
                 </button>
@@ -57,7 +69,69 @@
             <div id="console">
                 <p id="textConsole"></p>
                 <p id="codeSolution">
-                    <span class="inProcess">&circlearrowright; Pendiente</span>
+                    // Para este ejercicio vamos usar dos inputs de texto,
+                    cargamos sus valores en variables<br />
+                    word1 = document.getElementById("word1").value;<br />
+                    word2 = document.getElementById("word2").value;<br />
+                    // Como el usuario podrá ejecutarlo más de una vez creamos
+                    una función para limpiar la consola<br />
+                    function cleanConsole() {<br />
+                    <span class="tab"></span>
+                    document.getElementById("codeWorking").innerHTML = "";<br />
+                    }<br />
+                    // Primero comprobamos que haya insertado dos palabras<br />
+                    if (word1 == null || word1 == "" || word2 == null || word2
+                    == "") {<br />
+                    <span class="tab"></span> cleanConsole();<br />
+                    <span class="tab"></span> console.log("¡Debes introducir dos
+                    palabras!");<br />
+
+                    // También comprobamos si ambas palabras son la misma<br />
+                    } else if (word1 === word2) {<br />
+                    <span class="tab"></span> cleanConsole();<br />
+                    <span class="tab"></span> console.log(<br />
+                    <span class="tab"></span> "Si ambas palabras son la misma no
+                    puedo comprobar si es un anagrama :("<br />
+                    <span class="tab"></span>);<br />
+
+                    <span class="tab"></span> // Si ambos casos son negativos
+                    entonces dividimos las palabras en carácteres individuales
+                    en arrays usando split y lo mostramos en consola<br />
+                    } else if (word1 !== word2) {<br />
+                    <span class="tab"></span> cleanConsole();<br />
+                    <span class="tab"></span> word1 = word1.toUpperCase();<br />
+                    <span class="tab"></span> word1Split = word1.split("");<br />
+                    <span class="tab"></span> word2 = word2.toUpperCase();<br />
+                    <span class="tab"></span> word2Split = word2.split("");<br />
+
+                    <span class="tab"></span>console.log("La primera palabra es
+                    " + word1Split.join(" ") + ".");<br />
+                    <span class="tab"></span>console.log("La segunda palabra es
+                    " + word2Split.join(" ") + ". \n");<br />
+                    // Utilizando el método sort junto con join unimos ambas
+                    arrays en dos strings para poder compararlas<br />
+                    word1 = word1Split.sort().join("");<br />
+                    word2 = word2Split.sort().join("");<br />
+                    // Si son iguales mostramos el mensaje positivo en
+                    consola<br />
+                    if (word1 === word2) {<br />
+                    <span class="tab"></span> console.log(<br />
+                    <span class="tab"></span> "¡Son anagramas! Están formadas
+                    por las mismas letras en distinto orden."<br />
+                    <span class="tab"></span> );<br />
+                    <span class="tab"></span> // En caso contrario le indicamos
+                    al usuario que no es un anagrama<br />
+                    <span class="tab"></span> } else {<br />
+                    <span class="tab"></span> console.log(<br />
+                    <span class="tab"></span> "Están compuestas por letras
+                    diferentes, así que no son anagramas..."<br />
+                    <span class="tab"></span> );<br />
+                    <span class="tab"></span>}<br />
+                    }
+
+                    <span class="inProcess" style="display: none"
+                        >&circlearrowright; Pendiente</span
+                    >
                 </p>
                 <p id="codeWorking"></p>
             </div>

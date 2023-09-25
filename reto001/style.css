@@ -11,6 +11,10 @@
     padding: 0 4lvh 0 4lvh;
 }
 
+.inputText {
+    margin: 0 1lvh 0 1lvh;
+}
+
 #description {
     color: #003049;
     margin: 2lvh 0 2lvh 4lvh;

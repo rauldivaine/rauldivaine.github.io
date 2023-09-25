@@ -13,6 +13,51 @@ function exeCode() {
     codeDiv.style.display = "none";
 
     // Y ejecutamos el código
+    // Para este ejercicio vamos usar dos inputs de texto, cargamos sus valores en variables
+    word1 = document.getElementById("word1").value;
+    word2 = document.getElementById("word2").value;
+    // Como el usuario podrá ejecutarlo más de una vez creamos una función para limpiar la consola
+    function cleanConsole() {
+        document.getElementById("codeWorking").innerHTML = "";
+    }
+
+    // Primero comprobamos que haya insertado dos palabras
+    if (word1 == null || word1 == "" || word2 == null || word2 == "") {
+        cleanConsole();
+        console.log("¡Debes introducir dos palabras!");
+
+        // También comprobamos si ambas palabras son la misma
+    } else if (word1 === word2) {
+        cleanConsole();
+        console.log(
+            "Si ambas palabras son la misma no puedo comprobar si es un anagrama :("
+        );
+
+        // Si ambos casos son negativos entonces dividimos las palabras en carácteres individuales en arrays usando split y lo mostramos en consola
+    } else if (word1 !== word2) {
+        cleanConsole();
+        word1 = word1.toUpperCase();
+        word1Split = word1.split("");
+        word2 = word2.toUpperCase();
+        word2Split = word2.split("");
+
+        console.log("La primera palabra es " + word1Split.join(" ") + ".");
+        console.log("La segunda palabra es " + word2Split.join(" ") + ". \n");
+        // Utilizando el método sort junto con join unimos ambas arrays en dos strings para poder compararlas
+        word1 = word1Split.sort().join("");
+        word2 = word2Split.sort().join("");
+        // Si son iguales mostramos el mensaje positivo en consola
+        if (word1 === word2) {
+            console.log(
+                "¡Son anagramas! Están formadas por las mismas letras en distinto orden."
+            );
+            // En caso contrario le indicamos al usuario que no es un anagrama
+        } else {
+            console.log(
+                "Están compuestas por letras diferentes, así que no son anagramas..."
+            );
+        }
+    }
 }
 
 // Función sencilla para mostrar la solución del código del reto
@@ -44,3 +89,11 @@ function showCode() {
         }
     };
 })();
+
+function alphaOnly(event) {
+    var value = String.fromCharCode(event.which);
+    var pattern = new RegExp(/[a-zA-Z]/i);
+    return pattern.test(value);
+}
+
+$(".inputText").bind("keypress", alphaOnly);
