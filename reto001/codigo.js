@@ -16,6 +16,8 @@ function exeCode() {
     // Para este ejercicio vamos usar dos inputs de texto, cargamos sus valores en variables
     word1 = document.getElementById("word1").value;
     word2 = document.getElementById("word2").value;
+    word1 = accentMarks(word1);
+    word2 = accentMarks(word2);
     // Como el usuario podrá ejecutarlo más de una vez creamos una función para limpiar la consola
     function cleanConsole() {
         document.getElementById("codeWorking").innerHTML = "";
@@ -46,8 +48,10 @@ function exeCode() {
         word2 = word2.toUpperCase();
         word2Split = word2.split("");
 
-        console.log("La primera palabra es " + word1Split.join(" ") + ".");
-        console.log("La segunda palabra es " + word2Split.join(" ") + ". \n");
+        console.log("La primera palabra es: \n" + word1Split.join(" ") + ".");
+        console.log(
+            "La segunda palabra es: \n " + word2Split.join(" ") + ". \n"
+        );
         // Utilizando el método sort junto con join unimos ambas arrays en dos strings para poder compararlas
         word1 = word1Split.sort().join("");
         word2 = word2Split.sort().join("");
@@ -95,10 +99,20 @@ function showCode() {
     };
 })();
 
+// Función para solo poder introducir texto en los inputs
 function alphaOnly(event) {
     var value = String.fromCharCode(event.which);
-    var pattern = new RegExp(/[a-zA-Z]/i);
+    var pattern = new RegExp(/[\p{Letter}]+/gu);
     return pattern.test(value);
 }
 
 $(".inputText").bind("keypress", alphaOnly);
+
+// Función para eliminar tildes de las strings
+
+function accentMarks(string) {
+    return string
+        .normalize("NFD")
+        .replace(/([aeio])\u0301|(u)[\u0301\u0308]/gi, "$1$2")
+        .normalize();
+}
