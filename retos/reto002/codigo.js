@@ -13,14 +13,21 @@ function exeCode() {
     codeDiv.style.display = "none";
 
     // Y ejecutamos el código
-    let numberBefore = 0;
-    let numberAfter = 1;
+    // Creamos tres variables, una para el número actual, otra para el siguiente,
+    // Y una tercera que usaremos para calcular el siguiente de la sucesión.
+    let a = 0;
+    let b = 1;
+    let temp;
+    // Y creamos un bucle for que recorreremos 50 veces
     for (let i = 1; i <= 50; i++) {
-        let numberTemp;
-        console.log(numberBefore);
-        numberTemp = numberBefore;
-        numberBefore = numberAfter;
-        numberAfter = numberTemp + numberAfter;
+        // Mostramos en consola el número
+        console.log(a);
+        // Guardamos el número anterior (a) en la variable temporal(temp), cambiamos
+        // el valor del número anterior (a) al del número siguiente (b) y en este
+        // (b) realizamos la suma de la variable temporal con sí mismo (temp+b)
+        temp = a;
+        a = b;
+        b = temp + b;
     }
 }
 

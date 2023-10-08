@@ -56,15 +56,22 @@
             <div id="console">
                 <p id="textConsole"></p>
                 <p id="codeSolution">
-                    let numberBefore = 0;<br>
-                    let numberAfter = 1;<br>
-                    for (let i = 1; i <= 50; i++) {<br>
-                        <span class="tab">    let numberTemp;<br>
-                            <span class="tab">    console.log(numberBefore);<br>
-                                <span class="tab">    numberTemp = numberBefore;<br>
-                                    <span class="tab">    numberBefore = numberAfter;<br>
-                                        <span class="tab">    numberAfter = numberTemp + numberAfter;<br>
-                    }
+                            // Creamos tres variables, una para el número actual, otra para el siguiente,<br>
+                            // Y una tercera que usaremos para calcular el siguiente de la sucesión.<br>
+                            let a = 0;<br>
+                            let b = 1;<br>
+                            let temp;<br>
+                            // Y creamos un bucle for que recorreremos 50 veces<br>
+                            for (let i = 1; i <= 50; i++) {<br>
+                                <span class="tab">    // Mostramos en consola el número<br>
+                                    <span class="tab">    console.log(a);<br>
+                                        <span class="tab">    // Guardamos el número anterior (a) en la variable temporal(temp), cambiamos<br>
+                                            <span class="tab">   // el valor del número anterior (a) al del número siguiente (b) y en este<br>
+                                                <span class="tab">    // (b) realizamos la suma de la variable temporal con sí mismo (temp+b)<br>
+                                                    <span class="tab">    temp = a;<br>
+                                                        <span class="tab">   a = b;<br>
+                                                            <span class="tab">   b = temp + b;<br>
+                            }<br>
                 </p>
                 <p id="codeWorking"></p>
             </div>
