@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reto #2: LA SUCESIÓN DE FIBONACCI</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    </head>
+    <body onload="generarMenu()">
+        <nav>
+            <div id="fullscreenContainer">
+                <div id="closeFullscreenMenu" onClick="closeMenu()">
+                    &#10006;
+                </div>
+                <div id="fullscreenMenu">
+                </div>
+            </div>
+        </nav>
+        <header>
+            <div id="header">
+                <h1 id="mainTitle">Reto #2: LA SUCESIÓN DE FIBONACCI</h1>
+                <div id="menuIcon" onClick="showMenu()">
+                    <div class="menuIconBars"></div>
+                    <div class="menuIconBars"></div>
+                    <div class="menuIconBars"></div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <h1 id="description">Descripción del reto:</h1>
+            <div id="challenge">
+                <p>
+                    /*<br />
+                    * Escribe un programa que imprima los 50 primeros números de
+                    la sucesión<br />
+                    * de Fibonacci empezando en 0.<br />
+                    * - La serie Fibonacci se compone por una sucesión de
+                    números en<br />
+                    * la que el siguiente siempre es la suma de los dos
+                    anteriores.<br />
+                    * 0, 1, 1, 2, 3, 5, 8, 13...<br />
+                    */<br />
+                </p>
+            </div>
+        </section>
+        <nav>
+            <div id="codeMenu">
+                <button id="showCode" onClick="showCode()">Ver código</button>
+                <button id="exeCode" onClick="exeCode()">
+                    Ejecutar código
+                </button>
+            </div>
+        </nav>
+        <section>
+            <div id="console">
+                <p id="textConsole"></p>
+                <p id="codeSolution">
+                    let numberBefore = 0;<br>
+                    let numberAfter = 1;<br>
+                    for (let i = 1; i <= 50; i++) {<br>
+                        <span class="tab">    let numberTemp;<br>
+                            <span class="tab">    console.log(numberBefore);<br>
+                                <span class="tab">    numberTemp = numberBefore;<br>
+                                    <span class="tab">    numberBefore = numberAfter;<br>
+                                        <span class="tab">    numberAfter = numberTemp + numberAfter;<br>
+                    }
+                </p>
+                <p id="codeWorking"></p>
+            </div>
+        </section>
+    </body>
+    <script src="../menu.js"></script>
+    <script src="codigo.js"></script>
+</html>

@@ -1,0 +1,207 @@
+/* Paleta de colores: https://coolors.co/003049-f18f01-e01a4f-fbfbfb-0892a5 */
+
+/* Estilos principales */
+
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
+.interactive {
+    text-shadow: 0px 0 5px #fdf4a5;
+    font-size: 0.7em;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto Mono, monospace;
+    background-color: #fbfbfb;
+    overflow-x: hidden;
+}
+
+br {
+    display: block;
+    margin: 10px 0;
+    content: "";
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%vw;
+    min-height: 10vw;
+    background-color: #e01a4f;
+    color: #fbfbfb;
+    font-size: calc(0.5em + 2vmin);
+    margin: 0 0 4lvh 0;
+}
+
+#mainTitle {
+    color: #fbfbfb;
+    padding: 0 4lvh 0 4lvh;
+}
+
+#subTitle {
+    margin: -2lvh 0 4lvh 0;
+    padding: 0 4lvh 0 4lvh;
+}
+
+#container {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#infoBox,
+#challengesList {
+    border-radius: 5px;
+    background-color: #003049;
+    color: #fbfbfb;
+    max-width: 70vw;
+    width: 70vw;
+    margin: 0 4lvh 4lvh 4lvh;
+    padding: 0 4lvh 0 4lvh;
+    font-size: 1.2em;
+}
+
+#challengesList {
+    font-size: calc(1.2em + 1vmin);
+    font-weight: bold;
+}
+
+#infoBox #challengesList,
+a {
+    color: #fbfbfb;
+}
+
+#infoBox #challengesList,
+a:hover {
+    color: #fbfbfb;
+    text-shadow: 0px 0 5px #fbfbfb;
+}
+
+.inProcess {
+    color: #0892a5;
+    font-size: 0.7em;
+}
+
+/* Estilos del menú */
+
+.fade-out {
+    animation: fadeOut ease 0.2s;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeIn ease 0.2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#fullscreenContainer {
+    margin: 0;
+    position: absolute;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+    background: rgb(0, 48, 73);
+    background: linear-gradient(
+        160deg,
+        rgba(0, 48, 73, 0.9) 50%,
+        rgba(224, 26, 79, 0.9) 100%
+    );
+    color: #fbfbfb;
+    backdrop-filter: blur(0.5em);
+    z-index: 100;
+    overflow: hidden;
+}
+
+#fullscreenMenu {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    opacity: 1;
+}
+
+#fullscreenMenu a {
+    font-size: calc(0.5em + 2vmin);
+    opacity: 1;
+    color: #fbfbfb;
+    text-decoration: none;
+}
+
+#fullscreenMenu a:hover {
+    font-size: calc(0.5em + 2vmin);
+    opacity: 1;
+    color: #fbfbfb;
+    text-decoration: none;
+    text-shadow: 0px 0 5px #fbfbfb;
+}
+
+#menuIcon {
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+    align-self: start;
+    margin: 1lvh 2lvh 0 0;
+}
+
+#menuIcon:hover {
+    cursor: pointer;
+}
+
+.menuIconBars {
+    width: 50px;
+    height: 5px;
+    background-color: #fbfbfb;
+    margin: 5px 0 5px 0;
+}
+
+#menuIcon:hover > .menuIconBars {
+    box-shadow: 0px 0 5px #fbfbfb;
+}
+
+#closeFullscreenMenu {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-self: end;
+    align-self: start;
+    font-size: 3.5em;
+    cursor: pointer;
+    margin: 0lvh 2lvh 0 0;
+}
+
+#closeFullscreenMenu:hover {
+    text-shadow: 0px 0 5px #fbfbfb;
+}

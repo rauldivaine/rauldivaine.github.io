@@ -31,6 +31,21 @@ async function closeMenu() {
     }
 }
 
+// Función para crear elementos del menú
+function generarMenu() {
+    const listaElementos = [
+        { href: "../", texto: "Volver a retos" },
+        { href: "../../", texto: "Ir a Inicio" },
+    ];
+
+    const listaHTML = document.getElementById("fullscreenMenu");
+
+    listaElementos.forEach((elemento) => {
+        const enlaceHTML = `<a href="${elemento.href}">${elemento.texto}</a><br>`;
+        listaHTML.innerHTML += enlaceHTML;
+    });
+}
+
 // Solución para el problema del overflow en dispositivos móviles.
 // Obtenemos la altura del visor y la multiplicamos por 1% para obtener un valor para la unidad vh
 let vh = window.innerHeight * 0.01;
